@@ -8,7 +8,7 @@ import { createOrder } from '../store/slices/orderSlice';
 import { fetchCart } from '../store/slices/cartSlice';
 import toast from 'react-hot-toast';
 
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = () => {
   const stripe = useStripe();
